@@ -1,0 +1,320 @@
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #79899c47;
+}
+.navbar-form .input-group {
+ display: inline-table;
+    vertical-align: middle;
+    width: 24% !important;
+    margin-left: 51px !important;
+    float: right !important;
+	
+}
+.navbar-inverse
+{
+	border:none;
+}
+@media(max-width: 640px){
+	.navbar-form .input-group {
+		width: 100%;
+     margin-left: 0px;
+	}
+}
+
+
+.tweet{
+    margin-bottom: 10px;
+}
+
+    .tweet-section {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        position: relative;
+        border: 1px solid #fff;
+    }
+    .tweet-section:after {
+        top: 100%;
+        left: 50px;
+        border: solid transparent;
+        content: " ";
+        position: absolute;
+        border-top-color: #fff;
+        border-width: 15px;
+        margin-left: -15px;
+    }
+
+    .tweet-desc {
+        margin-top: 20px;
+        text-align:left;
+        padding-left: 15px;
+    }
+        .tweet-desc img {
+            border: 1px solid #f5f5f5;
+            border-radius: 150px;
+            height: 70px;
+            padding: 3px;
+            width: 70px;
+            display:inline-block;
+            vertical-align: top;
+        }
+
+        .tweet-writer{
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 10px;
+        }
+
+            .tweet-writer-name{
+                font-weight: bold;
+            }
+
+            .tweet-writer-designation{
+                font-size: 85%;
+            }
+
+            .tweet-writer-company{
+                font-size: 85%;
+            }
+    /*---- Outlined Styles ----*/
+   
+
+    .tweet.tweet-primary{
+        
+    }
+        .tweet.tweet-primary .tweet-section{
+            border-color: #337AB7;
+            color: #286090;
+            background-color: rgba(51, 122, 183, 0.1);
+        }
+
+           .tweet.tweet-primary .tweet-section:after {
+    border-top-color: #6d859b;
+}
+
+        .tweet.tweet-primary .tweet-desc{
+            
+        }
+
+            .tweet.tweet-primary .tweet-desc img{
+                border-color: #337AB7;
+            }
+
+            .tweet.tweet-primary .tweet-writer-name{
+                color: #337AB7;
+            }
+
+   
+
+.list-group-item {
+    border: 2px solid #6d859b;
+}
+.backgroundImage
+{
+	//background-color: rgba(8,160,233,0.5);
+	color:#fff;
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	height:150px;
+	padding:10px;
+}
+.backblurimage{filter: blur(0px) ;z-index: -1;}
+footer 
+{
+	background-color: #555;
+	color: white;
+	padding: 15px;
+}
+
+
+.navbar-inverse {
+    background-color: #3a5c79ad;
+    border-color: #3a5c79ad;
+    color: #000000;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	color: #fff;
+	font-weight: bold;
+    line-height: 20px;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #fff;
+	font-weight: bold;
+}
+
+@media (min-width: 768px) .navbar {
+	border-radius: 0px;
+}
+
+
+.search-follower {
+    border-radius: 30px 30px 30px 30px;
+    /*border-radius:Top-left, Top-right, Bottom-right, Bottom-left;*/
+}
+
+.my_twitter_logo
+{
+    height: 26px;
+    width: 26px;
+    margin-top: -5px;
+    margin-left: 40px;
+    margin-right: 3px;
+}
+.header {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+.center {
+
+    width: 309px;
+	height: 320px;
+	 border-radius: 3px;
+	 box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.profile {
+  float: left;
+  width: 180px;
+  height: 320px;
+  text-align: center;
+}
+.profile .image {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  margin: 38px auto 0 auto;
+}
+.profile .image .circle-1, .profile .image .circle-2 {
+  position: absolute;
+  box-sizing: border-box;
+  width: 76px;
+  height: 76px;
+  top: -3px;
+  left: -3px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #786450 #786450 #786450 transparent;
+  border-radius: 50%;
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+}
+.profile .image .circle-2 {
+  width: 82px;
+  height: 82px;
+  top: -6px;
+  left: -6px;
+  border-color: #786450 transparent #786450 #786450;
+}
+.profile .image img {
+  display: block;
+  border-radius: 50%;
+  background: #F5E8DF;
+}
+.profile .image:hover {
+  cursor: pointer;
+}
+.profile .image:hover .circle-1, .profile .image:hover .circle-2 {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+.profile .image:hover .circle-2 {
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+}
+.profile .name {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.profile .job {
+  font-size: 11px;
+  line-height: 15px;
+}
+.profile .actions {
+  margin-top: 33px;
+}
+.profile .actions .btn {
+  display: block;
+  width: 120px;
+  height: 30px;
+  margin: 0 auto 10px auto;
+  background: none;
+  border: 1px solid #786450;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  box-sizing: border-box;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  color: #786450;
+}
+.profile .actions .btn:hover {
+  background: #786450;
+  color: #fff;
+}
+
+.stats {
+  float: left;
+}
+.stats .box {
+  box-sizing: border-box;
+  width: 120px;
+  height: 99px;
+  background: #eaf1f8;
+  text-align: center;
+  padding-top: 28px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+.stats .box:hover {
+  background: #c7dcf1;
+  cursor: pointer;
+}
+.stats .box:nth-child(2) {
+  margin: 1px 0;
+}
+.stats span {
+  display: block;
+}
+.stats .value {
+  font-size: 18px;
+  font-weight: 600;
+}
+.stats .parameter {
+  font-size: 11px;
+}
+/*header*/
+	.topnav {
+    overflow: hidden;
+    background-color: #6d859b;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.well{
+margin-top: 20px; padding-top:  20px;  padding-bottom: 20px;
+}

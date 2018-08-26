@@ -1,0 +1,86 @@
+.tweet{
+    margin-bottom: 10px;
+}
+
+    .tweet-section {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        position: relative;
+        border: 1px solid #fff;
+    }
+    .tweet-section:after {
+        top: 100%;
+        left: 50px;
+        border: solid transparent;
+        content: " ";
+        position: absolute;
+        border-top-color: #fff;
+        border-width: 15px;
+        margin-left: -15px;
+    }
+
+    .tweet-desc {
+        margin-top: 20px;
+        text-align:left;
+        padding-left: 15px;
+    }
+        .tweet-desc img {
+            border: 1px solid #f5f5f5;
+            border-radius: 150px;
+            height: 70px;
+            padding: 3px;
+            width: 70px;
+            display:inline-block;
+            vertical-align: top;
+        }
+
+        .tweet-writer{
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 10px;
+        }
+
+            .tweet-writer-name{
+                font-weight: bold;
+            }
+
+            .tweet-writer-designation{
+                font-size: 85%;
+            }
+
+            .tweet-writer-company{
+                font-size: 85%;
+            }
+    /*---- Outlined Styles ----*/
+   
+
+    .tweet.tweet-primary{
+        
+    }
+        .tweet.tweet-primary .tweet-section{
+            border-color: #337AB7;
+            color: #286090;
+            background-color: rgba(51, 122, 183, 0.1);
+        }
+
+           .tweet.tweet-primary .tweet-section:after {
+    border-top-color: #6d859b;
+}
+
+        .tweet.tweet-primary .tweet-desc{
+            
+        }
+
+            .tweet.tweet-primary .tweet-desc img{
+                border-color: #337AB7;
+            }
+
+            .tweet.tweet-primary .tweet-writer-name{
+                color: #337AB7;
+            }
+
+   
