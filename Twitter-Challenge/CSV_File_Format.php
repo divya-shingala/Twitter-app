@@ -1,5 +1,5 @@
 <?php
-@session_start();
+session_start();
 error_reporting(0);
 include_once("includes/config.php");
 include_once("auth/twitteroauth.php");
@@ -13,11 +13,11 @@ if(isset($connection))
 	$Download_data = $_SESSION['DownloadInfo'];
 	$file = $Download_data['file_name'];
 	$user = $Download_data['user_name'];
-	ob_clean();
+	
 	header('Content-Type: application/excel');
-	ob_clean();
+	
 	header('Content-Disposition: attachment; filename='.$file.'.csv');
-	ob_clean();
+	
 	$fp = fopen('php://output', 'w');
 		$data = array("Name", "Username", "Location", "CreatedOn");
 		fputcsv($fp, $data);
