@@ -1,5 +1,5 @@
 <?php
-@session_start();
+session_start();
 include_once("includes/config.php");
 include_once("auth/twitteroauth.php");
 error_reporting(0);
@@ -43,7 +43,7 @@ if(isset($connection))
 				}
 			}
 		}
-		ob_end_clean();
+		
 		$pdf->Output();
 	
 }
