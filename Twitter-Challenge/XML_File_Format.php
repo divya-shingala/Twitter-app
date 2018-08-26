@@ -1,5 +1,5 @@
 <?php
-@session_start();
+session_start();
 include_once("includes/config.php");
 include_once("auth/twitteroauth.php");
 error_reporting(0);
@@ -12,11 +12,11 @@ if(isset($connection))
 	$Download_data = $_SESSION['DownloadInfo'];
 	$user = $Download_data['user_name'];
 	$file = $Download_data['file_name'];
-	ob_clean();
+	
 	header('Content-type: text/xml');
-	ob_clean();
+	
 	header('Content-Disposition: attachment; filename='.$file.'.xml');
-	ob_clean();
+	
 		$xml = new SimpleXMLElement("<?xml version=\"1.0\"?>  <followers></followers>");
 		$cursor = -1;
 		while ($cursor!=0) {
