@@ -2,7 +2,7 @@
 
  Develop by : Divya Shingala
  
- Twitter    : @Divya_shingala
+ Twitter    : {@Divya_shingala}(https://twitter.com/Divya_shingala)
  
  Email      : divudpatel89@gmail.com
  
