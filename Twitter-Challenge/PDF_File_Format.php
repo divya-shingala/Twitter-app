@@ -38,13 +38,13 @@ if(isset($connection))
 				$info = $connection->get('users/lookup', array('user_id' => implode(',', $implode)));
 				foreach($info as $item) {
 					
-					$pdf->WriteHTML("<p>{$count} .{$item->name} (@{$item->screen_name}) </p>");
+					$pdf->WriteHTML("<p>{$count} .{$item->name} (@{$item->screen_name}) </p><br />");
 					$count++;
 				}
 			}
 		}
-		
-		$pdf->Output();
+		ob_end_clean();
+		$pdf->Output('D',$file.'.pdf');
 	
 }
 ?>
