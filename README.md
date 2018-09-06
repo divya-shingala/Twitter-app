@@ -11,7 +11,7 @@
 	
 ## Demo
 
-https://aviddivya.000webhostapp.com/Twitter-Challenge/Twitter-Challenge/process.php
+https://aviddivya.000webhostapp.com/Twitter-Challenge/process.php
 
 ## library
 
@@ -23,7 +23,7 @@ https://aviddivya.000webhostapp.com/Twitter-Challenge/Twitter-Challenge/process.
 	
 ## Features
 
-	1. Visits https://aviddivya.000webhostapp.com/Twitter-Challenge/Twitter-Challenge/process.php page.
+	1. Visits https://aviddivya.000webhostapp.com/Twitter-Challenge/process.php page.
 	2. We will connect on script using Twitter account using Twitter Auth.
 		- If login user than view their profile on script.
 	3. After authentication, we will display latest 10 tweets on “home” timeline.
