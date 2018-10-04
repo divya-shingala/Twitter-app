@@ -1,5 +1,5 @@
 <?php
-session_start();
+@session_start();
 include_once("includes/config.php");
 include_once("auth/twitteroauth.php");
 error_reporting(0);
@@ -11,7 +11,7 @@ $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $oauth_token, $oau
 if(isset($connection))
 {
 	$Download_data = $_SESSION['DownloadInfo'];
-	$file = $Download_data['file_name'];
+	$EmailID = $Download_data['EmailID'];
 	$user = $Download_data['user_name'];
 	
 	
@@ -24,12 +24,12 @@ if(isset($connection))
 		$pdf->SetFontSize(10);
 		$count = 1;
 		$cursor = -1;
-		while($count != 0)
+		while($cursor != 0)
 		{
 			$follower = $connection->get('followers/ids',array('count'=>5000,'screen_name'=>$user,'cursor'=>$cursor));
 			$cursor = $follower->next_cursor;
 			if(!isset($cursor))
-			{	$pdf->WriteHTML("<p>try after 15 min...</p>");
+			{	$pdf->WriteHTML("<p>try after 15 mins</p>");
 				break;
 			}
 			
@@ -44,7 +44,40 @@ if(isset($connection))
 			}
 		}
 		ob_end_clean();
-		$pdf->Output('D',$file.'.pdf');
+		$filenamepdf=$user.'.pdf';
+		//$output=
+		$pdf->Output('F',$filenamepdf);
+		// file_put_contents($filenamepdf, $output);
 	
 }
+
+if ($cursor == 0)
+{
+    require '/home/wejnxgbtf05d/public_html/Twitter-Challenge/PHPMailer-master/src/Exception.php';
+    require '/home/wejnxgbtf05d/public_html/Twitter-Challenge/PHPMailer-master/src/PHPMailer.php';
+    require '/home/wejnxgbtf05d/public_html/Twitter-Challenge/PHPMailer-master/src/SMTP.php';
+    $mail = new PHPMailer\PHPMailer\PHPMailer();
+    $mail->IsMail();
+    $mail->Host = 'relay-hosting.secureserver.net';
+    $mail->Port = 25;
+    $mail->SMTPAuth = false;
+    $mail->SMTPSecure = false;
+    $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+    $mail->IsHTML(true);
+    $mail->Username = "divudpatel89@gmail.com";  
+    $mail->Password = "95175385245669495192";
+    $mail->SetFrom('divudpatel89@gmail.com', 'Twitter-data');
+    $mail->Subject = "Followers Data";
+    $mail->AltBody = "";
+    $mail->AddAddress($EmailID);
+    $mail->MsgHTML("Your requested follower data is in file attached below");
+      
+        $mail->AddAttachment('/home/wejnxgbtf05d/public_html/Twitter-Challenge/'.$filenamepdf);    
+      
+    $mail->Send();
+  
+   header('location:home.php');
+ 
+   // echo __DIR__;
+    }
 ?>
