@@ -10,10 +10,10 @@ if(isset($_REQUEST['google_download']))
 }
 if(isset($_REQUEST['btn_Download']))
 {
-	$filename = $_REQUEST['file_name'];
+	$EmailID = $_REQUEST['EmailID'];
 	$username = $_REQUEST['user_name'];
 	$fileformat = $_REQUEST['file_format'];
-	$arr = array("file_name"=>$filename,"user_name"=>$username);
+	$arr = array("EmailID"=>$EmailID,"user_name"=>$username);
 	$_SESSION['DownloadInfo'] = $arr;		
 	if($fileformat == 'CSV')
 		header('location:CSV_File_Format.php?');
@@ -125,6 +125,7 @@ if($_SESSION['status'] == 'verified' && isset($_SESSION['status']) )
 						
 						
 					</li>
+				
 					<li><a href="logout.php?logout"><span> Logout</span></a></li>
 				
                 </ul>
@@ -381,16 +382,17 @@ if($_SESSION['status'] == 'verified' && isset($_SESSION['status']) )
 		</div>
 		<div class="row">
 				<div class="col-sm-6">
-					<input type="text"  class="form-control ftxt" placeholder="Enter file Name" name="file_name">
+					<input type="text"  class="form-control ftxt" placeholder="Enter EmailID" name="EmailID">
 					<br/>
 					<button type="button" class="btn btn-success tweet_btn" data-dismiss="modal">Cancel</button>
 				</div>
 				
 				<div class="col-sm-6 text-right">
 					<select class="form-control" name="file_format">
-					  <option value="XML">XML</option>
-					  <option value="CSV">CSV</option>
+					<!--  <option value="XML">XML</option>-->
+					  
 					  <option value="PDF">PDF</option>
+					  <option value="CSV">CSV</option>
 					</select>
 					<br/>
 					<button type="submit" class="btn btn-success tweet_btn" onclick="close();" name ="btn_Download">Submit</button>
